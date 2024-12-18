@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <style>
+       .h{
+        padding: 30px;
+        margin: 30px;
+        border-radius: 10px;
+
+       }
+    </style>
+</head>
+    <body><div class="h">
+       
+        <form onsubmit="validation()">
+            
+            <label> fullname:</label>
+            <input id="user1" type="text" required ><br><br>
+            <label>email:</label>
+            <input  id="user2" required type="email"><br><br>
+            <label> password:</label>
+            <input id="user3" required type="password"><br><br>
+            <label> confirm password:</label>
+            <input id="user4" required type="password"><br><br>
+            <input type="submit" value="register">
+        </form>
+    </div>
+        <script>
+            function validation(){
+                event.preventDefault()
+                const name=document.getElementById("user1").value 
+                const email=document.getElementById("user2").vaule 
+                const password=document.getElementById("user3").vaule
+                const confirmpassword=document.getElementById("user4").vaule  
+                if(name.length<5){
+                    alert("name should be atleast 5 characters")
+                }
+                else if(confirmpassword!=password){
+                    alert("password doest match...")
+
+                }
+                else{
+                    alert("form sucessfully registerd .....")
+                    redirect()
+                }
+
+                }
+              function redirect(){
+                window.location.href="login.html"
+              }
+                
+            
+        </script>
+        
+    </body>
+</html>
